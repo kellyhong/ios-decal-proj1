@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
         counter += 1
         let statview: StatsViewController = StatsViewController()
         statview.updateCounter()
-        
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
     @IBAction func deleteItem(sender: AnyObject) {
