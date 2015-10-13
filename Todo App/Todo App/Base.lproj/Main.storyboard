@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Add View Controller-->
+        <!--Add a Task-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddViewController" customModule="Todo_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="4vA-y6-4DV"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="y30-Sc-9as">
+                    <navigationItem key="navigationItem" title="Add a Task" id="y30-Sc-9as">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="PoM-hb-qjD">
                             <connections>
                                 <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="VY3-QG-RHp"/>
@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="1848" y="1005"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Task Details-->
         <scene sceneID="UFZ-HG-nx8">
             <objects>
                 <viewController id="jVR-iq-61b" customClass="DetailViewController" customModule="Todo_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzQ-rn-T3t">
                                 <rect key="frame" x="228" y="79" width="145" height="30"/>
                                 <state key="normal" title="Completed This Task">
-                                    <color key="titleColor" red="0.63421762829999995" green="1" blue="0.33734045439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.41162931913051481" blue="0.98963341751418488" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="completeItem:" destination="jVR-iq-61b" eventType="touchUpInside" id="gIO-Ni-z2N"/>
@@ -111,7 +111,7 @@
                             <constraint firstItem="CzQ-rn-T3t" firstAttribute="centerY" secondItem="tug-Ra-txw" secondAttribute="centerY" id="rbV-yV-RkZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iTM-zF-tfV">
+                    <navigationItem key="navigationItem" title="Task Details" id="iTM-zF-tfV">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="LUG-xU-bnj">
                             <connections>
                                 <action selector="deleteItem:" destination="jVR-iq-61b" id="Kn4-D3-IMF"/>
@@ -127,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="1314" y="1972"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Tasks-->
         <scene sceneID="BBm-Ol-69L">
             <objects>
                 <tableViewController id="90F-o8-ces" customClass="TableViewController" customModule="Todo_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,7 +153,7 @@
                             <outlet property="delegate" destination="90F-o8-ces" id="Etb-oi-SpK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ure-3s-orT">
+                    <navigationItem key="navigationItem" title="Tasks" id="Ure-3s-orT">
                         <barButtonItem key="leftBarButtonItem" title="Stats" id="cNW-0v-bkw">
                             <connections>
                                 <segue destination="wsX-cM-rLF" kind="push" id="6dv-0V-OaO"/>
@@ -188,7 +188,7 @@
             </objects>
             <point key="canvasLocation" x="246" y="1040"/>
         </scene>
-        <!--Stats View Controller-->
+        <!--You have completed-->
         <scene sceneID="I5H-OV-JRF">
             <objects>
                 <viewController id="wsX-cM-rLF" customClass="StatsViewController" customModule="Todo_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,22 +200,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Am-1J-8qn">
-                                <rect key="frame" x="223" y="189" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tasks in 24 Hours!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-7p-CND">
+                                <rect key="frame" x="229" y="524" width="142" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tasks in 24 Hours!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-7p-CND">
-                                <rect key="frame" x="229" y="501" width="142" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alA-Mt-3he">
+                                <rect key="frame" x="269" y="252" width="62" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b2V-7p-CND" firstAttribute="centerX" secondItem="grf-8f-rLk" secondAttribute="centerX" id="Uo2-9F-u0c"/>
+                            <constraint firstItem="xDh-TW-Efr" firstAttribute="top" secondItem="b2V-7p-CND" secondAttribute="bottom" constant="55" id="i6b-7y-3Vp"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qP3-zC-W2l"/>
+                    <navigationItem key="navigationItem" title="You have completed" id="qP3-zC-W2l"/>
+                    <connections>
+                        <outlet property="stat" destination="alA-Mt-3he" id="CCW-6m-fZj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atx-Hg-uze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

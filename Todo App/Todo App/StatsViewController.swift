@@ -10,8 +10,17 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    @IBOutlet weak var stat: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // counter
+        let detailviewcontroller: DetailViewController = DetailViewController()
+        let x = detailviewcontroller.counter
+        let xString = String(x)
+        stat.text = xString
+        
+        
 
         // Do any additional setup after loading the view.
     }

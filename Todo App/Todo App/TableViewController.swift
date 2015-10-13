@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
     
     var toDoItems:NSMutableArray = NSMutableArray();
     
+    
 //    required init(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)!
 //    }
@@ -62,15 +63,11 @@ class TableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-//        if (segue != nil && segue!.identifier == "schowDetail"){
-//            var selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
-//            var detailViewController:DetailViewController = segue!.destinationViewController as! DetailViewController
-//            DetailViewController.toDoData = toDoItems.objectAtIndex(selectedIndexPath.row) as! NSDictionary
-//        }
+
         if (segue != nil && segue!.identifier == "showDetail") {
             // create index path based on what was clicked
-            var selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
-            var detailViewController:DetailViewController = segue!.destinationViewController as! DetailViewController
+            let selectedIndexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let detailViewController:DetailViewController = segue!.destinationViewController as! DetailViewController
             
             detailViewController.toDoData = toDoItems.objectAtIndex(selectedIndexPath.row) as! NSDictionary
             

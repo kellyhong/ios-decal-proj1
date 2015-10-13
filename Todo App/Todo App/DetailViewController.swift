@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var notesTextField: UITextView!
     
+    var counter = 0
+    
     var toDoData:NSDictionary = NSDictionary()
     
     override func viewDidLoad() {
@@ -33,8 +35,8 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func completeItem(sender: AnyObject) {
-        let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        
+        let detailviewcontroller: DetailViewController = DetailViewController()
+        detailviewcontroller.counter += 1
         
     }
 
