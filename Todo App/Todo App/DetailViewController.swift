@@ -35,8 +35,9 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func completeItem(sender: AnyObject) {
-        let detailviewcontroller: DetailViewController = DetailViewController()
-        detailviewcontroller.counter += 1
+        counter += 1
+        let statview: StatsViewController = StatsViewController()
+        statview.updateCounter()
         
     }
 

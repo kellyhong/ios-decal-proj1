@@ -9,6 +9,8 @@
 import UIKit
 
 class StatsViewController: UIViewController {
+    
+    var counter = 0
 
     @IBOutlet weak var stat: UILabel!
     
@@ -19,8 +21,6 @@ class StatsViewController: UIViewController {
         let x = detailviewcontroller.counter
         let xString = String(x)
         stat.text = xString
-        
-        
 
         // Do any additional setup after loading the view.
     }
@@ -28,6 +28,10 @@ class StatsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func updateCounter() {
+        counter += 1
     }
     
 
